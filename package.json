@@ -1,0 +1,15 @@
+{
+  "name": "valdez-consultoria",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de obligaciones fiscales — Valdez Consultoría",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-scripts": "5.0.1"
+  }
+}
