@@ -1252,34 +1252,4 @@ function PendingModal({ pending, emps, onClose, onAuthorize, onReject }) {
     </Shell>
   );
 }
-  } value={e.id}>{e.name} ({e.role})</option>
-                  ))}
-                </select>
-              ) : (
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 8 }}>
-                  <input className="inp" style={{ padding: '8px 12px', fontSize: 13 }} placeholder="Nombre"
-                    value={newData[p.uid]?.name || p.name || ''}
-                    onChange={(e) => setNewData({ ...newData, [p.uid]: { ...newData[p.uid], name: e.target.value } })} />
-                  <input className="inp" style={{ padding: '8px 12px', fontSize: 13 }} placeholder="Puesto"
-                    value={newData[p.uid]?.role || ''}
-                    onChange={(e) => setNewData({ ...newData, [p.uid]: { ...newData[p.uid], role: e.target.value } })} />
-                </div>
-              )}
-              <div style={{ display: 'flex', gap: 8 }}>
-                <button className="btn bs" style={{ padding: '6px 14px' }} onClick={() => {
-                  if (m === 'link') {
-                    if (linkTo[p.uid]) onAuthorize(p, linkTo[p.uid], false, null);
-                  } else {
-                    const data = newData[p.uid] || { name: p.name || p.email };
-                    if (data.name?.trim()) onAuthorize(p, null, true, data);
-                  }
-                }}>✓ Autorizar</button>
-                <button className="btn bd" style={{ padding: '6px 14px' }} onClick={() => onReject(p)}>✕ Rechazar</button>
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </Shell>
-  );
-}
+  
